@@ -1,4 +1,4 @@
-import 'package:cookbook/opacitydemo.dart';
+import 'package:cookbook/orientationdemo.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: appTitle,
       debugShowCheckedModeBanner: false,
-      home: OpacityDemo(title: appTitle),
+      home: OrientationDemo(title: appTitle),
+      // OpacityDemo(title: appTitle),
     );
   }
 }
