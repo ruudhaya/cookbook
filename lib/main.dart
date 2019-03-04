@@ -11,9 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: appTitle,
       debugShowCheckedModeBanner: false,
-      home:
-          //DrawerDemo(),
-          OpacityDemo(title: appTitle),
+      home: OpacityDemo(title: appTitle),
     );
   }
 }

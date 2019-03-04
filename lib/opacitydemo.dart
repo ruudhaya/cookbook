@@ -1,5 +1,5 @@
+import 'package:cookbook/drawercontent.dart';
 import 'package:flutter/material.dart';
-import 'package:cookbook/drawerdemo.dart';
 
 class OpacityDemo extends StatefulWidget {
   final String title;
@@ -17,6 +17,9 @@ class _OpacityDemoState extends State<OpacityDemo> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+      ),
+      drawer: Drawer(
+        child: DrawerContent(),
       ),
       body: Center(
         child: AnimatedOpacity(
