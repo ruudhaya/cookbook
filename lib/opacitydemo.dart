@@ -21,16 +21,19 @@ class _OpacityDemoState extends State<OpacityDemo> {
       drawer: Drawer(
         child: DrawerContent(),
       ),
-      body: Center(
-        child: AnimatedOpacity(
-          opacity: _visible ? 1.0 : 0.0,
-          duration: Duration(milliseconds: 300),
-          child: Container(
-            width: 200,
-            height: 200,
-            color: Colors.green,
+      body: Column(
+        children: <Widget>[
+          AnimatedOpacity(
+            opacity: _visible ? 1.0 : 0.0,
+            duration: Duration(milliseconds: 300),
+            child: Container(
+              width: 200,
+              height: 200,
+              color: Colors.green,
+            ),
           ),
-        ),
+          SnackBarContent(),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
@@ -40,6 +43,32 @@ class _OpacityDemoState extends State<OpacityDemo> {
         },
         tooltip: 'Toggle Opacity',
         child: Icon(Icons.flip),
+      ),
+    );
+  }
+}
+
+class SnackBarContent extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new Container(
+      child: RaisedButton(
+        onPressed: () {
+          print('Clicked button..');
+          final snackBar = SnackBar(
+            content: Text('Yay! A SnackBar!'),
+            action: SnackBarAction(
+              label: 'Undo',
+              onPressed: () {
+                // Some code to undo the change!
+                print('Clicked Undo Button..');
+              },
+            ),
+          );
+
+          Scaffold.of(context).showSnackBar(snackBar);
+        },
+        child: Text('Show SnackBar'),
       ),
     );
   }
