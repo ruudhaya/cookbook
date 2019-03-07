@@ -1,4 +1,4 @@
-import 'package:cookbook/SimpleForm.dart';
+import 'package:cookbook/JsonListDemo.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: appTitle,
       debugShowCheckedModeBanner: false,
-      home: SimpleForm(),
+      home: JsonListViewer(),
+      // SimpleForm(),
       // TabDemo(),
       // OrientationDemo(title: appTitle),
       // OpacityDemo(title: appTitle),
